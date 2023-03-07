@@ -7,6 +7,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { AppRoutingModule } from '../app-routing.module';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { RouterModule } from '@angular/router';
+import { MessageComponent } from './components/message/message.component';
 
 
 
@@ -17,6 +18,7 @@ import { RouterModule } from '@angular/router';
     HomePageComponent,
     SidebarComponent,
     SearchBoxComponent,
+    MessageComponent,
   ],
   imports: [
     CommonModule,

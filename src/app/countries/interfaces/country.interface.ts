@@ -92,6 +92,7 @@ export interface Languages {
   ara?: string;
   ita?: string;
   eng?: string;
+  aym?:string;
 }
 
 export interface Maps {

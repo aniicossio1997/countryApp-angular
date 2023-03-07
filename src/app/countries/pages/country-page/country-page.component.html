@@ -1,1 +1,29 @@
-<p>country-page works!</p>
+<ng-template  #loading>
+    <div class="alert alert-info">
+        Esperendo el pais...
+    </div>
+</ng-template>
+<div *ngIf="country;else loading">
+    <h2 class="text-muted">Pais: <strong>{{country.name.common}}</strong></h2>
+    <hr>
+    <div class="row">
+        <div class="col-4">
+                <h3>Bandera</h3>
+                <img [src]="country.flags.svg" [alt]="country.name.common" class="img-thumbnail rounded ">
+                <h4>Traducciones: </h4>
+                <div class="d-flex flex-wrap">
+                    <span class="badge bg-primary"> {{country.translations['ara'].common}} </span>
+                    <span class="badge bg-primary"> {{country.translations['bre'].common}} </span>
+                    <span class="badge bg-primary"> {{country.translations['ces'].common}} </span>
+                </div>
+        </div>
+        <div class="col-6"> 
+                <ul class="list-group pt-10"> 
+                    <li class="list-group-item">Población: <strong>{{country.population | number}}</strong></li>
+                    <li class="list-group-item">Codigo: <strong> {{country.ccn3}}</strong></li>
+                    <li class="list-group-item">Idiomas: <strong  > {{country.languages['spa']}} - {{country.languages['aym']}}</strong></li>
+                </ul>
+        </div>
+    </div>
+
+</div>

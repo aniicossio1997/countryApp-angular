@@ -3,8 +3,8 @@
 <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
 <div class="row">
   <div class="col">
-    <!-- (onValue)="searchByCapital($event)" -->
-    <shared-search-box (onDebounce)="searchByCapital($event)" placeholder='By capital...'></shared-search-box>
+    <!-- (onValue)="searchByCapital($event)" (onDebounce)="searchByCapital($event)" -->
+    <shared-search-box (onValue)="searchByCapital($event)" placeholder='By capital...' [initialValue]="initialValue"></shared-search-box>
   </div>
 </div>
 <div class="row">

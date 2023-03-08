@@ -1,12 +1,10 @@
 <h3>Por Capital</h3>
 <hr>
-
+<shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
 <div class="row">
   <div class="col">
-    <shared-search-box
-    placeholder='By capital...'
-    (onValue)="searchByCapital($event)"
-    ></shared-search-box>
+    <!-- (onValue)="searchByCapital($event)" -->
+    <shared-search-box (onDebounce)="searchByCapital($event)" placeholder='By capital...'></shared-search-box>
   </div>
 </div>
 <div class="row">
